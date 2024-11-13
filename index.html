@@ -38,10 +38,10 @@
         <nav class="l-side-nav">
           <ul class="side-nav">
             <li class="is-active"><span>Home</span></li>
-            <li><span>I miei lavori</span></li>
-            <li><span>About</span></li>
-            <li><span>Contact</span></li>
+            <li><span>I miei progetti</span></li>
+            <li><span>Esperienze</span></li>
             <li><span>Contatti</span></li>
+            <li><span>Hire Us </span></li>
           </ul>
         </nav>
         <ul class="l-main-content main-content">
@@ -50,7 +50,7 @@
               <div class="intro--banner">
 <h1 style="font-size: 24px;">“I computer sono incredibilmente veloci, <br>accurati e stupidi. <br>Gli uomini sono incredibilmente lenti, <br> inaccurati e intelligenti. <br> L'insieme dei due costituisce <br> una forza incalcolabile.”</h1>
                 </h1>
-                <button class="cta">Contatti
+                <button class="cta">Hire Us
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
                   <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
                     <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
@@ -78,7 +78,7 @@
           </li>
           <li class="l-section section">
             <div class="work">
-              <h2>Alcuni dei miei lavori</h2>
+              <h2>Alcuni dei miei progetti</h2>
               <div class="work--lockup">
                 <ul class="slider">
                   <li class="slider--item slider--item-left">
@@ -162,26 +162,134 @@
           </li>
           <li class="l-section section">
             <div class="contact">
-              <div class="contact--lockup">
-                <div class="modal">
-                  <div class="modal--information">
-                    <p>Pawia 5, 31-154 Kraków, Poland</p>
-                    <a href="mailto:ouremail@gmail.com">ouremail@gmail.com</a>
-                    <a href="tel:+148126287560">+48 12 628 75 60</a>
-                  </div>
-                  <ul class="modal--options">
-                    <li><a href="#0">Bēhance</a></li>
-                    <li><a href="#0">dribbble</a></li>
-                    <li><a href="mailto:ouremail@gmail.com">Contatti</a></li>
-                  </ul>
+                <div class="contact--lockup">
+                    <div class="modal">
+                        <div class="modal--information">
+                            <p>Torino, Piemonte</p>
+                        </div>
+                        <ul class="modal--options">
+                            <li><a href="https://wa.me/+393476383369">WHATSAPP</a></li>
+                            <li class="email-dropdown">
+                                <a href="#" onclick="toggleDropdown(event)">MAIL</a>
+                                <div class="dropdown-content" id="emailDropdown">
+                                    <div class="email-display">cris.bet97@gmail.com</div>
+                                    <div class="email-list">
+                                        <a href="mailto:cris.bet97@gmail.com">Client Predefinito</a>
+                                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=cris.bet97@gmail.com" target="_blank">Gmail</a>
+                                        <a href="https://outlook.live.com/mail/0/deeplink/compose?to=cris.bet97@gmail.com" target="_blank">Outlook</a>
+                                        <a href="https://account.proton.me/mail/compose?to=cris.bet97@gmail.com" target="_blank">ProtonMail</a>
+                                        <a href="https://outlook.live.com/mail/0/deeplink/compose?to=cris.bet97@gmail.com" target="_blank">Hotmail</a>
+                                        <a href="https://www.icloud.com/mail?to=cris.bet97@gmail.com" target="_blank">iCloud Mail</a>
+                                        <a href="https://mail.libero.it/mail/compose.php?to=cris.bet97@gmail.com" target="_blank">Libero</a>
+                                        <a href="https://mail.tim.it/mail/compose.php?to=cris.bet97@gmail.com" target="_blank">Alice/TIM</a>
+                                        <a href="https://mail.tiscali.it/?to=cris.bet97@gmail.com" target="_blank">Tiscali</a>
+                                        <a href="https://mail.vodafone.it/mail/compose?to=cris.bet97@gmail.com" target="_blank">Vodafone</a>
+                                        <a href="https://mail.virgilio.it/mail/compose?to=cris.bet97@gmail.com" target="_blank">Virgilio</a>
+                                        <a href="https://compose.mail.yahoo.com/?to=cris.bet97@gmail.com" target="_blank">Yahoo Mail</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="https://t.me/djskipe">Telegram</a></li>
+                        </ul>
+                    </div>
                 </div>
-              </div>
             </div>
-          </li>
+        </li>
+        
+        <style>
+        .email-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #0c0c0c;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+            z-index: 1000;
+            border-radius: 4px;
+            margin-top: 5px;
+            border: 1px solid #333;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .email-display {
+            color: #fff;
+            padding: 12px 16px;
+            border-bottom: 1px solid #333;
+            font-size: 0.9em;
+            text-align: center;
+            background-color: #1a1a1a;
+        }
+        
+        .email-list {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .dropdown-content a {
+            color: #fff !important;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s ease;
+            font-size: 0.9em;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #333;
+            color: #fff !important;
+        }
+        
+        .show {
+            display: block;
+        }
+        
+        /* Scrollbar personalizzata */
+        .email-list::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .email-list::-webkit-scrollbar-track {
+            background: #0c0c0c;
+        }
+        
+        .email-list::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+        
+        .email-list::-webkit-scrollbar-thumb:hover {
+            background: #444;
+        }
+        </style>
+        
+        <script>
+        function toggleDropdown(event) {
+            event.preventDefault();
+            document.getElementById("emailDropdown").classList.toggle("show");
+        }
+        
+        // Chiudi il dropdown se l'utente clicca fuori
+        window.onclick = function(event) {
+            if (!event.target.matches('.email-dropdown a')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        </script>
           <li class="l-section section">
             <div class="hire">
               <h2>You want us to do</h2>
-              <!-- checkout formspree.io for easy form setup -->
+              <!-- -->
               <form class="work-request">
                 <div class="work-request--options">
                   <span class="options-a">
@@ -269,9 +377,9 @@
   </div>
   <ul class="outer-nav">
     <li class="is-active">Home</li>
-    <li>I miei lavori</li>
-    <li>About</li>
-    <li>Contact</li>
+    <li>I miei progetti</li>
+    <li>Esperienze</li>
+    <li>Contatti</li>
     <li>Hire us</li>
   </ul>
 </div>
