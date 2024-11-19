@@ -201,6 +201,7 @@ $( document ).ready(function() {
           $left.removeClass('slider--item-left').next().addClass('slider--item-left');
           $center.removeClass('slider--item-center').next().addClass('slider--item-center');
           $right.removeClass('slider--item-right').next().addClass('slider--item-right');
+          console.log($right.next());
         }
         else {
           if (curLeftPos === totalWorks - 1) {
