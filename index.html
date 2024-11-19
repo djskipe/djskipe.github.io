@@ -112,6 +112,7 @@
                       Guarda il tutorial su YouTube
                     </a>
                   </li>
+                </ul>
                 <div class="slider--prev">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                   viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
@@ -194,98 +195,7 @@
                     </div>
                 </div>
             </div>
-        </li>
-        
-        <style>
-        .email-dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #0c0c0c;
-            min-width: 200px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
-            z-index: 1000;
-            border-radius: 4px;
-            margin-top: 5px;
-            border: 1px solid #333;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        .email-display {
-            color: #fff;
-            padding: 12px 16px;
-            border-bottom: 1px solid #333;
-            font-size: 0.9em;
-            text-align: center;
-            background-color: #1a1a1a;
-        }
-        
-        .email-list {
-            max-height: 300px;
-            overflow-y: auto;
-        }
-        
-        .dropdown-content a {
-            color: #fff !important;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            transition: background-color 0.3s ease;
-            font-size: 0.9em;
-        }
-        
-        .dropdown-content a:hover {
-            background-color: #333;
-            color: #fff !important;
-        }
-        
-        .show {
-            display: block;
-        }
-        
-        /* Scrollbar personalizzata */
-        .email-list::-webkit-scrollbar {
-            width: 8px;
-        }
-        
-        .email-list::-webkit-scrollbar-track {
-            background: #0c0c0c;
-        }
-        
-        .email-list::-webkit-scrollbar-thumb {
-            background: #333;
-            border-radius: 4px;
-        }
-        
-        .email-list::-webkit-scrollbar-thumb:hover {
-            background: #444;
-        }
-        </style>
-        
-        <script>
-        function toggleDropdown(event) {
-            event.preventDefault();
-            document.getElementById("emailDropdown").classList.toggle("show");
-        }
-        
-        // Chiudi il dropdown se l'utente clicca fuori
-        window.onclick = function(event) {
-            if (!event.target.matches('.email-dropdown a')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                for (var i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-        </script>
+          </li>
           <li class="l-section section">
             <div class="hire">
               <h2>You want us to do</h2>
@@ -293,68 +203,19 @@
               <form class="work-request">
                 <div class="work-request--options">
                   <span class="options-a">
-                    <input id="opt-1" type="checkbox" value="app design">
-                    <label for="opt-1">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                      </g>
-                      </svg>
-                      App Design
-                    </label>
-                    <input id="opt-2" type="checkbox" value="graphic design">
-                    <label for="opt-2">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                      </g>
-                      </svg>
-                      Graphic Design
-                    </label>
-                    <input id="opt-3" type="checkbox" value="motion design">
-                    <label for="opt-3">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                      </g>
-                      </svg>
-                      Motion Design
-                    </label>
+                    <a class="hire-btns" href="https://www.google.com" target="_blank">Google</a>
+
+                    <a class="hire-btns" href="https://www.google.com" target="_blank">Google</a>
+
+                    <a class="hire-btns" href="https://www.google.com" target="_blank">Google</a>
                   </span>
                   <span class="options-b">
-                    <input id="opt-4" type="checkbox" value="ux design">
-                    <label for="opt-4">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                      </g>
-                      </svg>
-                      UX Design
-                    </label>
-                    <input id="opt-5" type="checkbox" value="webdesign">
-                    <label for="opt-5">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                      </g>
-                      </svg>
-                      Webdesign
-                    </label>
-                    <input id="opt-6" type="checkbox" value="marketing">
-                    <label for="opt-6">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                      </g>
-                      </svg>
-                      Marketing
-                    </label>
+                    <a class="hire-btns" href="https://www.google.com" target="_blank">Google</a>
+
+                    <a class="hire-btns" href="https://www.google.com" target="_blank">Google</a>
+
+                    <a class="hire-btns" href="https://www.google.com" target="_blank">Google</a>
+
                   </span>
                 </div>
                 <div class="work-request--information">
@@ -384,8 +245,30 @@
   </ul>
 </div>
 
+
+<script>
+  function toggleDropdown(event) {
+      event.preventDefault();
+      document.getElementById("emailDropdown").classList.toggle("show");
+  }
+  
+  // Chiudi il dropdown se l'utente clicca fuori
+  window.onclick = function(event) {
+      if (!event.target.matches('.email-dropdown a')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          for (var i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+              }
+          }
+      }
+  }
+  </script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="assets/js/vendor/hammer-2.0.8.js"></script>
 <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
-<script src="assets/js/functions-min.js"></script>
+<script src="assets/js/functions.js"></script>
 </body>
 </html>
