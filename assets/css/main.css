@@ -1477,7 +1477,7 @@ body {
     color: #fff
 }
 
-.work-request input[type="submit"] {
+.work-request button[type="submit"] {
     width: 400px;
     max-width: 100%;
     line-height: 50px;
@@ -1583,6 +1583,7 @@ body {
     border-bottom: 1px solid #fff;
     border-radius: 0
 }
+
 
 .work-request--information input[type="text"]:focus,
 .work-request--information input[type="email"]:focus {
@@ -1917,3 +1918,32 @@ body {
     color: #c0c0c0;
   }
   
+
+  /* hire us textbox */
+
+.information-text{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#work-box{
+    width: 100%;
+    padding: 0 0 5px 0;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 0;
+    resize: none;
+  }
+
+  #work-box:focus {
+    outline: none;
+    background-color: #0c0c0c
+}

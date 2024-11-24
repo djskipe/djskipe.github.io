@@ -175,18 +175,7 @@
                                 <div class="dropdown-content" id="emailDropdown">
                                     <div class="email-display">cris.bet97@gmail.com</div>
                                     <div class="email-list">
-                                        <a href="mailto:cris.bet97@gmail.com">Client Predefinito</a>
-                                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=cris.bet97@gmail.com" target="_blank">Gmail</a>
-                                        <a href="https://outlook.live.com/mail/0/deeplink/compose?to=cris.bet97@gmail.com" target="_blank">Outlook</a>
-                                        <a href="https://account.proton.me/mail/compose?to=cris.bet97@gmail.com" target="_blank">ProtonMail</a>
-                                        <a href="https://outlook.live.com/mail/0/deeplink/compose?to=cris.bet97@gmail.com" target="_blank">Hotmail</a>
-                                        <a href="https://www.icloud.com/mail?to=cris.bet97@gmail.com" target="_blank">iCloud Mail</a>
-                                        <a href="https://mail.libero.it/mail/compose.php?to=cris.bet97@gmail.com" target="_blank">Libero</a>
-                                        <a href="https://mail.tim.it/mail/compose.php?to=cris.bet97@gmail.com" target="_blank">Alice/TIM</a>
-                                        <a href="https://mail.tiscali.it/?to=cris.bet97@gmail.com" target="_blank">Tiscali</a>
-                                        <a href="https://mail.vodafone.it/mail/compose?to=cris.bet97@gmail.com" target="_blank">Vodafone</a>
-                                        <a href="https://mail.virgilio.it/mail/compose?to=cris.bet97@gmail.com" target="_blank">Virgilio</a>
-                                        <a href="https://compose.mail.yahoo.com/?to=cris.bet97@gmail.com" target="_blank">Yahoo Mail</a>
+                                        <a href="mailto:cris.bet97@gmail.com">Invia mail</a>
                                     </div>
                                 </div>
                             </li>
@@ -211,7 +200,7 @@ Nonostante le diverse esperienze lavorative, la mia passione per l’informatica
                 </p>
               </div>
               <!-- Form -->
-              <form class="work-request">
+              <form class="work-request" action="https://api.web3forms.com/submit" method="POST" id="mail">
                 <div class="work-request--options">
                   <span class="options-a">
                     <a class="hire-btns" href="https://github.com/djskipe" target="_blank">Github</a>
@@ -219,17 +208,47 @@ Nonostante le diverse esperienze lavorative, la mia passione per l’informatica
                     <a class="hire-btns" href="https://mega.nz/file/ddNA1ZyA#inB5keFFmfbXTfqD3iDiy2njRwr5dsbZA4jpMxxTjvo" target="_blank">Curriculum</a>
                   </span>
                 </div>
-                <div class="work-request--information">
-                  <div class="information-name">
-                    <input id="name" type="text" spellcheck="false">
-                    <label for="name">Name</label>
+
+
+                  <!-- Replace with your Access Key -->
+                  <input type="hidden" name="access_key" value="d712aa2d-6bb1-41fc-a22a-15bbace6a65f">
+              
+                  <!-- Form Inputs. Each input must have a name="" attribute -->
+
+                  <div class="work-request--information">
+                    <div class="information-name">
+                      <input id="name" type="text" name="name" spellcheck="false">
+                      <label for="name">Name</label>
+                    </div>
+                    <div class="information-email">
+                      <input id="email" type="email" name="email" spellcheck="false">
+                      <label for="email">Email</label>
+                    </div>
+  
                   </div>
-                  <div class="information-email">
-                    <input id="email" type="email" spellcheck="false">
-                    <label for="email">Email</label>
+
+
+                  <div class="information-text">
+                    <textarea type="text" name="Descrizione" id="work-box" rows="6" placeholder="Scrivi le tue richieste..."></textarea>
+                
                   </div>
-                </div>
-                <input type="submit" value="Send Request">
+              
+                  <!-- Honeypot Spam Protection -->
+                  <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+              
+                  <!-- Custom Confirmation / Success Page -->
+                  <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+              
+                  <button type="submit">Submit Form</button>
+
+                  <div id="result"></div>
+              
+              </form>
+
+              
+              
+              
+              
               </form>          
 
             </div>
@@ -249,7 +268,46 @@ Nonostante le diverse esperienze lavorative, la mia passione per l’informatica
 </div>
 
 
+
 <script>
+const form = document.getElementById('mail');
+const result = document.getElementById('result');
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+  result.innerHTML = "Please wait..."
+
+    fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+                result.innerHTML = "Form submitted successfully";
+            } else {
+                console.log(response);
+                result.innerHTML = json.message;
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            result.innerHTML = "Something went wrong!";
+        })
+        .then(function() {
+            form.reset();
+            setTimeout(() => {
+                result.style.display = "none";
+            }, 3000);
+        });
+});
+
   function toggleDropdown(event) {
       event.preventDefault();
       document.getElementById("emailDropdown").classList.toggle("show");
